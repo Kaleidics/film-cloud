@@ -1,0 +1,29 @@
+@import '../../styles/carousel';
+
+.trailer-carousel {
+  position: relative;
+
+  .trailer-swiper-container {
+    overflow: hidden;
+
+    .swiper-wrapper {
+      padding: 1rem 0;
+
+      .swiper-slide {
+        height: 200px;
+        width: 345px;
+
+        iframe {
+          border: none;
+          height: 200px;
+          width: 347px;
+        }
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      z-index: 10;
+    }
+  }
+}
