@@ -1,0 +1,135 @@
+@import '../../styles/variables';
+@import '../../styles/carousel';
+
+.carousel-container {
+  padding: 1rem .2rem 0;
+
+  // carousel-container__separator
+  &__separator {
+    background-image: radial-gradient(circle, rgba(210,208,208,0.19091386554621848) 0%, rgba(210,208,208,0) 90%);
+    border: none;
+    height: 2px;
+  }
+
+  .swiper-container {
+    font-family: $secondary-font;
+    height: 360px;
+    width: 100%;
+
+    // swiper-container__title
+    &__title {
+      color: $primary-font-color;
+      font-family: $tertiary-font;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: .4rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    .swiper-slide {
+      opacity: .8;
+      position: relative;
+      text-align: center;
+      transition: transform .2s;
+
+      // swiper-slide__image
+      &__image {
+        border-radius: 5px;
+        height: 190px;
+        width: auto;
+      }
+
+      // swiper-slide__title
+      &__title {
+        color: $secondary-font-color;
+        font-family: $primary-font;
+        font-size: .9rem;
+        margin: 5px 0 0;
+        width: 135px;
+      }
+
+      // swiper-slide__genres
+      &__genres {
+        color: rgba(255, 255, 255, .7);
+        font-family: $primary-font;
+        font-size: .8rem;
+        margin: 5px 0 0;
+        width: 135px;
+      }
+
+      // swiper-slide-rating
+      &-rating {
+        background-color: rgba(0, 0, 0, .8);
+        color: $primary-font-color;
+        font-size: .8rem;
+        margin: 0;
+        padding: 3px;
+        position: absolute;
+        left: 0;
+        top: .8rem;
+        width: 45px;
+
+        // swiper-slide-rating__icon
+        &__icon {
+          fill: $primary-font-color;
+          height: auto;
+          margin: 0 5px -5px 0;
+          width: 18px;
+        }
+      }
+
+      // swiper-slide:hover
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+        transition: transform .2s;
+      }
+
+      a,
+      a:active,
+      a:visited
+      a:hover {
+        color: initial;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .carousel-container {
+
+    .swiper-container {
+
+      .swiper-slide {
+        text-align: left;
+
+        &__title {
+          text-align: left;
+        }
+
+        &__rating {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .carousel-container {
+
+    .swiper-container {
+
+      .swiper-slide {
+        opacity: .6;
+        text-align: left;
+
+        &__title {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
