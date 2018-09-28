@@ -15,6 +15,7 @@ import getTVFavorites from '../../actions/TVActions/getTVFavorites';
 import getMoviesRated from '../../actions/movieActions/getMoviesRated';
 import getTVRated from '../../actions/TVActions/getTVRated';
 
+import profileAvatar from './images/profile-avatar.jpeg';
 import './UserProfile.scss';
 
 class UserProfile extends Component {
@@ -67,7 +68,7 @@ class UserProfile extends Component {
     if (logInStatus === 'APPROVED') {
       return(
         <ul className="user-profile-container-aside-nav-list">
-        
+
           <li className="user-profile-container-aside-nav-list-item">
             <svg className="user-profile-container-aside-nav-list-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M360 64H152c-22.002 0-40 17.998-40 40v344l144-64 144 64V104c0-22.002-17.998-40-40-40z"/></svg>
             <p className="user-profile-container-aside-nav-list-item__title">Favorites</p>
@@ -113,7 +114,7 @@ class UserProfile extends Component {
             <nav className="user-profile-container-aside-nav">
 
               <div className="user-profile-container-aside-nav-profile wow swing" data-wow-delay=".5s" data-wow-duration="5s">
-                <img className="user-profile-container-aside-nav-profile-image" src={this.props.userDetails.avatar ? `https://secure.gravatar.com/avatar/${this.props.userDetails.avatar.gravatar.hash}.jpg?s=64` : "https://placeimg.com/640/640/people"} alt="user" />
+                <img className="user-profile-container-aside-nav-profile-image" src={this.props.userDetails.avatar ? `https://secure.gravatar.com/avatar/${this.props.userDetails.avatar.gravatar.hash}.jpg?s=64` : profileAvatar} alt="user" />
                 <div className="user-profile-container-aside-nav-profile-info">
                   <h2 className="user-profile-container-aside-nav-profile-info__user-name">Welcome {this.props.userDetails.username ? this.props.userDetails.username : 'Guest'}</h2>
                   <p className="user-profile-container-aside-nav-profile-info__user-type">{this.props.userDetails.username ? 'TMDB User' : 'Guest'}</p>
