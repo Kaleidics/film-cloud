@@ -16,7 +16,7 @@ import SearchResults from '../SearchResults/SearchResults';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 class App extends Component {
-  componentDidMount() {
+  componentWillMount() {
     // fetch genres and api configuration
     this.props.postMDBConfig(`https://api.themoviedb.org/3/configuration?api_key=${this.props.apiKey}`);
     this.props.postMovieGenres(`https://api.themoviedb.org/3/genre/movie/list?api_key=${this.props.apiKey}`);
