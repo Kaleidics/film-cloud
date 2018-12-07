@@ -26,7 +26,7 @@ npm install npm@latest -g
 git clone https://github.com/AlanBayWalker/film-cloud.git
 ```
 
-2. Run npm install inside project root
+2. Run npm install inside project root directory
 
 ```
 npm install
