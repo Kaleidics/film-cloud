@@ -41,7 +41,7 @@ npm run start
 4. Explore
 
 ```
-Enjoy :)
+Enjoy! :)
 ```
 
 ## Built With
